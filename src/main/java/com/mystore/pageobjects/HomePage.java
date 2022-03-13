@@ -10,5 +10,11 @@ public class HomePage extends BaseClass{
 		PageFactory.initElements(driver, this);
 	}
 	
+	public String getCurrentURL() {
+		String homePageURL= driver.getCurrentUrl();
+		return homePageURL;
+	}
+	
+	
 
 }

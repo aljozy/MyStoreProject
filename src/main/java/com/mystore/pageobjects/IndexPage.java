@@ -40,7 +40,7 @@ public class IndexPage extends BaseClass {
 	}
 	
 	
-	public LoginPage ClickOnSignIn() throws Throwable {
+	public LoginPage clickOnSignIn() throws Throwable {
 		Action.click(driver, signInBtn);
 		//linking the page as we click on sign in it will return the object of login page
 		return new LoginPage();
