@@ -1,5 +1,14 @@
 package com.mystore.pageobjects;
 
-public class HomePage {
+import org.openqa.selenium.support.PageFactory;
+
+import com.mystore.base.BaseClass;
+
+public class HomePage extends BaseClass{
+	
+	public HomePage() {
+		PageFactory.initElements(driver, this);
+	}
+	
 
 }

@@ -14,7 +14,7 @@ public class OrderConfirmationPage extends BaseClass {
 	public OrderConfirmationPage() {
 		PageFactory.initElements(driver, this);
 	}
-	
+	//
 	
 	public String validateConfimMessage () throws Throwable {
 		String Msg =confirmMessage.getText();

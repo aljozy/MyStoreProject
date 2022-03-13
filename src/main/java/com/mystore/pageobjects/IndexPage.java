@@ -1,5 +1,6 @@
 package com.mystore.pageobjects;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -8,6 +9,7 @@ import com.mystore.actiondriver.Action;
 import com.mystore.base.BaseClass;
 
 public class IndexPage extends BaseClass {
+	public  WebDriver driver;
 	
 	//declartion
 
@@ -15,12 +17,12 @@ public class IndexPage extends BaseClass {
 	WebElement signInBtn;
 	
 	
-	@FindBy(css = "img.logo")
+	@FindBy(xpath = "//img[@class='logo img-responsive']")
 	WebElement myStoreLogo;
 	
 	
 	@FindBy(id="search_query_top")
-	WebElement searchBox;
+	WebElement searchProductBox;
 	
 	
 	@FindBy(name="submit_search")
@@ -31,8 +33,9 @@ public class IndexPage extends BaseClass {
 	
 	//construtor calling
 	
-	public IndexPage() {
+	public IndexPage(WebDriver driver) {
 		//here this means it will initialized all the objects
+		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 	
@@ -50,7 +53,7 @@ public class IndexPage extends BaseClass {
 	
 	public String getMyStoreTitle() {
 		
-		String title =driver.getTitle();
+		String title = driver.getTitle();
 		
 		return title;
 	}
@@ -58,7 +61,7 @@ public class IndexPage extends BaseClass {
 	
 	public SearchResultPage searchProduct(String productName) throws Throwable {
 		
-		Action.type(searchBox, productName);
+		Action.type(searchProductBox, productName);
 		Action.click(driver, searchButton);
 		//coz it will return the page with search results
 		return new SearchResultPage();
