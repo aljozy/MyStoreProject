@@ -32,11 +32,7 @@ public class BaseClass {
 					"\\Configuration\\config.properties");
 			prop.load(fis);
 			
-			prop.getProperty("browser");
-			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver();
-			System.out.println("driver : "+driver);
-			driver.get(prop.getProperty("url"));
+			
 			
 			
 		} catch (FileNotFoundException e) {
@@ -49,7 +45,11 @@ public class BaseClass {
 	 
 	public static void launchApp() {
 		//browser get from properties files
-		
+		prop.getProperty("browser");
+		WebDriverManager.chromedriver().setup();
+		driver = new ChromeDriver();
+		System.out.println("driver : "+driver);
+		driver.get(prop.getProperty("url"));
 		
 		//String browserName =
 		

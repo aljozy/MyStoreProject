@@ -13,7 +13,7 @@ public class IndexPage extends BaseClass {
 	
 	//declartion
 
-	@FindBy(className =  "login")
+	@FindBy(className = "login")
 	WebElement signInBtn;
 	
 	
