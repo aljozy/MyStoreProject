@@ -1,41 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-03-15T01:16:25 IST" name="Default suite" finished-at="2022-03-15T01:17:24 IST" duration-ms="59506">
+  <suite started-at="2022-03-16T01:48:09 IST" name="Default suite" finished-at="2022-03-16T01:48:23 IST" duration-ms="14369">
     <groups>
     </groups>
-    <test started-at="2022-03-15T01:16:25 IST" name="Default test" finished-at="2022-03-15T01:17:24 IST" duration-ms="59506">
-      <class name="com.mystore.testcases.HomePageTest">
-        <test-method is-config="true" signature="loadConfig()[pri:0, instance:com.mystore.testcases.HomePageTest@7b36aa0c]" started-at="2022-03-15T01:16:25 IST" name="loadConfig" finished-at="2022-03-15T01:16:25 IST" duration-ms="15" status="PASS">
+    <test started-at="2022-03-16T01:48:09 IST" name="Default test" finished-at="2022-03-16T01:48:23 IST" duration-ms="14369">
+      <class name="com.mystore.testcases.SearchResultPageTest">
+        <test-method is-config="true" signature="loadConfig()[pri:0, instance:com.mystore.testcases.SearchResultPageTest@16a0ee18]" started-at="2022-03-16T01:48:09 IST" name="loadConfig" finished-at="2022-03-16T01:48:09 IST" duration-ms="18" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadConfig -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.mystore.testcases.HomePageTest@7b36aa0c]" started-at="2022-03-15T01:16:25 IST" name="setup" finished-at="2022-03-15T01:16:45 IST" duration-ms="20277" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.mystore.testcases.SearchResultPageTest@16a0ee18]" started-at="2022-03-16T01:48:09 IST" name="setup" finished-at="2022-03-16T01:48:20 IST" duration-ms="10710" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="wishListTest()[pri:1, instance:com.mystore.testcases.HomePageTest@7b36aa0c]" started-at="2022-03-15T01:16:45 IST" name="wishListTest" finished-at="2022-03-15T01:16:59 IST" duration-ms="13769" status="PASS">
+        <test-method signature="productAvialabilityTest()[pri:0, instance:com.mystore.testcases.SearchResultPageTest@16a0ee18]" started-at="2022-03-16T01:48:20 IST" name="productAvialabilityTest" finished-at="2022-03-16T01:48:23 IST" duration-ms="3019" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- wishListTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.mystore.testcases.HomePageTest@7b36aa0c]" started-at="2022-03-15T01:16:59 IST" name="tearDown" finished-at="2022-03-15T01:16:59 IST" duration-ms="251" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.mystore.testcases.HomePageTest@7b36aa0c]" started-at="2022-03-15T01:16:59 IST" name="setup" finished-at="2022-03-15T01:17:13 IST" duration-ms="14327" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="orderHistoryDetailsTest()[pri:2, instance:com.mystore.testcases.HomePageTest@7b36aa0c]" started-at="2022-03-15T01:17:13 IST" name="orderHistoryDetailsTest" finished-at="2022-03-15T01:17:24 IST" duration-ms="10577" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- orderHistoryDetailsTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.mystore.testcases.HomePageTest@7b36aa0c]" started-at="2022-03-15T01:17:24 IST" name="tearDown" finished-at="2022-03-15T01:17:24 IST" duration-ms="236" status="PASS">
+        </test-method> <!-- productAvialabilityTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.mystore.testcases.SearchResultPageTest@16a0ee18]" started-at="2022-03-16T01:48:23 IST" name="tearDown" finished-at="2022-03-16T01:48:23 IST" duration-ms="560" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.mystore.testcases.HomePageTest -->
+      </class> <!-- com.mystore.testcases.SearchResultPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

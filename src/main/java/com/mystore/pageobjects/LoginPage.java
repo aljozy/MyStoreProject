@@ -50,6 +50,7 @@ public class LoginPage extends BaseClass {
 	
 	public AccountCreationPage createNewAccount(String newEmail) throws Throwable {
 		Action.type(emailForNewAccount, newEmail );
+		Action.click(driver, createNewAccoutnBtn);
 		return new AccountCreationPage();
 	}
 	
