@@ -49,9 +49,10 @@ public void selectSize(String size1) throws Throwable {
 	}
 
 public void clickOnAddToCart() throws Throwable {
-	//Action.fluentWait(driver, addToCartBtn, 10);
 	
 	Action.click(driver, addToCartBtn);
+	Action.explicitWait(driver, dialogBox, 10);
+	
 	
 	
 }
@@ -67,6 +68,7 @@ public boolean validateAddToCart( )throws Throwable {
 public  OrderPage clickOnCheckOut()throws Throwable{
 	
 	Action.JSClick(driver,proceedToCheckOutBtn );
+	Action.fluentWait(proceedToCheckOutBtn, 10);
 	return new OrderPage();
 	
 }
