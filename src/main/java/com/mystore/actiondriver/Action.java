@@ -737,7 +737,7 @@ public class Action extends BaseClass  {
 	}
 	
 	 
-	public static void fluentWait(WebDriver driver,WebElement element, int timeOut) {
+	public static void fluentWait(WebElement element, int timeOut) {
 	    Wait<WebDriver> wait = null;
 	    try {
 	        wait = new FluentWait<WebDriver>((WebDriver) driver)
