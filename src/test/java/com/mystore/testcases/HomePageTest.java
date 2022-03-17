@@ -23,13 +23,13 @@ public class HomePageTest  extends HomePage {
 	
 	@AfterMethod
 	public void tearDown() {
-		driver.quit();
+		getDriver().quit();
 	}
 	
 	
 	@Test(priority = 1)
 	public void wishListTest() throws Throwable {
-		indexPage = new IndexPage(driver);
+		indexPage = new IndexPage(getDriver());
 		loginPage=indexPage.clickOnSignIn();
 		
 		homePage=loginPage.loginIn(prop.getProperty("username"), prop.getProperty("password"));
@@ -40,7 +40,7 @@ public class HomePageTest  extends HomePage {
 	
 		@Test(priority = 2)
 		public void orderHistoryDetailsTest() throws Throwable {
-		indexPage = new IndexPage(driver);
+		indexPage = new IndexPage(getDriver());
 			
 			
 		loginPage =indexPage.clickOnSignIn();

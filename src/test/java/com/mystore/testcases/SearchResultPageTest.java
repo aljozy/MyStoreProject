@@ -21,13 +21,13 @@ public class SearchResultPageTest extends BaseClass {
 	
 	@AfterMethod
 	public void tearDown() {
-		driver.quit();
+		getDriver().quit();
 	}
 	
 	
 	@Test
 	public void productAvialabilityTest() throws Throwable {
-		indexPage = new IndexPage(driver);
+		indexPage = new IndexPage(getDriver());
 		
 		searchResultPage=indexPage.searchProduct("t-shirt");
 		boolean result = searchResultPage.isProductAvailable();

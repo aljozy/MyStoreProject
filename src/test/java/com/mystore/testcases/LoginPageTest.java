@@ -23,13 +23,13 @@ public class LoginPageTest extends BaseClass{
 	
 	@AfterClass
 	public void tearDown() {
-		driver.quit();
+		getDriver().quit();
 	}
 	
 	@Test
 	public void loginTest() throws Throwable {
 		
-		indexPage = new IndexPage(driver);
+		indexPage = new IndexPage(getDriver());
 		//we can store in login page since it returns the object of login page
 		loginPage = new LoginPage();
 		loginPage =	indexPage.clickOnSignIn();

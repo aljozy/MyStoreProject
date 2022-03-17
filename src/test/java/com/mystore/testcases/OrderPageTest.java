@@ -35,14 +35,14 @@ public class OrderPageTest extends BaseClass
 	
 	@AfterMethod
 	public void tearDown() {
-		driver.quit();
+		getDriver().quit();
 	}
 
 	
 	@Test
 	public void verifyTotalPrice() throws Throwable {
 		
-		indexPage = new IndexPage(driver);
+		indexPage = new IndexPage(getDriver());
 		searchResultPage = indexPage.searchProduct("t-shirt");
 		addToCartPage = searchResultPage.clickOnProduct();
 		

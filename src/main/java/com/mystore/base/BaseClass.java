@@ -10,6 +10,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.BeforeTest;
 
 import com.mystore.actiondriver.Action;
@@ -18,7 +19,15 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseClass {
 	public static Properties prop;
-	public static WebDriver driver;
+	//public static WebDriver driver;
+	
+	//declare Thread local driver
+	public static ThreadLocal<RemoteWebDriver> driver = new ThreadLocal<>();
+	
+	public static WebDriver getDriver() {
+		//Get driver from threadLocalMap
+		return driver.get();
+	}
 	
 	
 	@BeforeTest
@@ -47,9 +56,11 @@ public class BaseClass {
 		//browser get from properties files
 		prop.getProperty("browser");
 		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver();
+		//driver = new ChromeDriver();
+		
+		driver.set(new ChromeDriver());
 		System.out.println("driver : "+driver);
-		driver.get(prop.getProperty("url"));
+		getDriver().get(prop.getProperty("url"));
 		
 		//String browserName =
 		

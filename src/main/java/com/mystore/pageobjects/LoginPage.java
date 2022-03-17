@@ -30,7 +30,7 @@ public class LoginPage extends BaseClass {
 	
 	
 	public LoginPage() {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(getDriver(), this);
 	}
 	
 	
@@ -39,7 +39,7 @@ public class LoginPage extends BaseClass {
 		Action.type(userName,uname);
 		Action.type(password,pswd);
 		
-		Action.click(driver, SignInBtn);
+		Action.click(getDriver(), SignInBtn);
 		
 		return new HomePage();
 		
@@ -50,7 +50,7 @@ public class LoginPage extends BaseClass {
 	
 	public AccountCreationPage createNewAccount(String newEmail) throws Throwable {
 		Action.type(emailForNewAccount, newEmail );
-		Action.click(driver, createNewAccoutnBtn);
+		Action.click(getDriver(), createNewAccoutnBtn);
 		return new AccountCreationPage();
 	}
 	
@@ -61,7 +61,7 @@ public AddressPage loginInAfterOrderPage(String uname, String pswd) throws Throw
 		Action.type(userName,uname);
 		Action.type(password,pswd);
 		
-		Action.click(driver, SignInBtn);
+		Action.click(getDriver(), SignInBtn);
 		
 		return new AddressPage();
 		

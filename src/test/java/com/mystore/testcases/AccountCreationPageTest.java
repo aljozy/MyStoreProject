@@ -24,7 +24,7 @@ public class AccountCreationPageTest extends BaseClass {
 	
 	@AfterMethod
 	public void tearDown() {
-		driver.quit();
+		getDriver().quit();
 	}
 	
 	
@@ -32,7 +32,7 @@ public class AccountCreationPageTest extends BaseClass {
 	@Test
 	public void verifyCreateAccountPage() throws Throwable
 	{
-		ip = new IndexPage(driver);
+		ip = new IndexPage(getDriver());
 		lp =ip.clickOnSignIn();
 		
 		accountCreation=lp.createNewAccount("abc@mail.com");

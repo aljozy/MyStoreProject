@@ -35,8 +35,8 @@ public class IndexPage extends BaseClass {
 	
 	public IndexPage(WebDriver driver) {
 		//here this means it will initialized all the objects
-		this.driver = driver;
-		PageFactory.initElements(driver, this);
+		this.driver = getDriver();
+		PageFactory.initElements(getDriver(), this);
 	}
 	
 	

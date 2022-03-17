@@ -30,7 +30,7 @@ public class AddToCartPageTest extends BaseClass {
 	
 	@AfterMethod
 	public void tearDown() {
-		driver.quit();
+		getDriver().quit();
 	
 	}
 	
@@ -38,7 +38,7 @@ public class AddToCartPageTest extends BaseClass {
 	@Test
 	public void addToCartTest() throws Throwable {
 		
-		indexPage = new IndexPage(driver);
+		indexPage = new IndexPage(getDriver());
 		searchResultPage = indexPage.searchProduct("t-shirt");
 		addToCartPage = searchResultPage.clickOnProduct();
 		

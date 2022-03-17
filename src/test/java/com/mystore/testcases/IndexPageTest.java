@@ -22,13 +22,13 @@ public class IndexPageTest extends BaseClass {
 	
 	@AfterClass
 	public void tearDown() {
-		driver.quit();
+		getDriver().quit();
 	}
 	
 	
 	@Test
 	public void verifyLogo() throws Throwable {
-		indexPage = new IndexPage(driver);
+		indexPage = new IndexPage(getDriver());
 		boolean result = indexPage.validateLogo();
 		Assert.assertTrue(result);
 		
@@ -39,7 +39,7 @@ public class IndexPageTest extends BaseClass {
 	@Test
 	
 	public void verifyTitle() {
-		indexPage = new IndexPage(driver);
+		indexPage = new IndexPage(getDriver());
 	String ActualTitle =	indexPage.getMyStoreTitle();//came from script
 	 String expectedTitle = "My Store"; //came from real browser website
 	Assert.assertEquals(ActualTitle, expectedTitle);

@@ -42,14 +42,14 @@ public class EndToEndTest extends BaseClass {
 	
 	@AfterMethod
 	public void tearDown() {
-		driver.quit();
+		getDriver().quit();
 	}
 	
 	@Test
 	public void endToEndTest() throws Throwable {
 		
 		
-		indexPage = new IndexPage(driver);
+		indexPage = new IndexPage(getDriver());
 		searchResultPage = indexPage.searchProduct("t-shirt");
 		addToCartPage = searchResultPage.clickOnProduct();
 		

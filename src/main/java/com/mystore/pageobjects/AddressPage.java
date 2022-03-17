@@ -14,13 +14,13 @@ public class AddressPage extends BaseClass {
 	
 	
 	public AddressPage() {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(getDriver(), this);
 	}
 	
 	
 	public ShippingPage clickOnCheckOut() throws Throwable {
 		
-		Action.click(driver, proceedToCheckOut);
+		Action.click(getDriver(), proceedToCheckOut);
 		return new ShippingPage();
 	}
 }

@@ -12,7 +12,7 @@ public class OrderConfirmationPage extends BaseClass {
 	WebElement confirmMessage ;
 	
 	public OrderConfirmationPage() {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(getDriver(), this);
 	}
 	//
 	
