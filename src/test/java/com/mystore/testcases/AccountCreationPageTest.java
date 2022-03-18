@@ -10,6 +10,7 @@ import com.mystore.pageobjects.AccountCreationPage;
 import com.mystore.pageobjects.HomePage;
 import com.mystore.pageobjects.IndexPage;
 import com.mystore.pageobjects.LoginPage;
+import com.mystore.utility.Log;
 
 public class AccountCreationPageTest extends BaseClass {
 	HomePage hp;
@@ -32,15 +33,26 @@ public class AccountCreationPageTest extends BaseClass {
 	@Test
 	public void verifyCreateAccountPage() throws Throwable
 	{
+		Log.startTestCase("verify account creation test");
+		
 		ip = new IndexPage(getDriver());
 		lp =ip.clickOnSignIn();
 		
+		Log.info("user clicked on signin button");
 		accountCreation=lp.createNewAccount("abc@mail.com");
 		
+		Log.info("user entered email");
 		Thread.sleep(3000);
 		boolean result =accountCreation.validateAccountCreatePage();
 		
 		Assert.assertFalse(result);
+		
+		Log.info("test verified successfully");
+		
+		Log.endTestCase("verify account creation test");
+		
+		
+		
 		
 		
 		
