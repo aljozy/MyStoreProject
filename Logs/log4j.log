@@ -9,3 +9,17 @@
 2022-03-19 00:48:27 INFO  Log:22 - verify user is successfully login
 2022-03-19 00:48:27 INFO  Log:22 - user login successfully
 2022-03-19 00:48:27 INFO  Log:15 - =====================================login test TEST END=========================================
+2022-03-23 23:20:13 INFO  Log:11 - =====================================add to cart test TEST START=========================================
+2022-03-23 23:20:17 INFO  Log:22 - user is searching the product
+2022-03-23 23:20:24 INFO  Log:22 - user clicked on the product
+2022-03-23 23:20:24 INFO  Log:22 - user entered the quantity
+2022-03-23 23:20:25 INFO  Log:22 - user selected the size of the product
+2022-03-23 23:20:27 INFO  Log:22 - user click on add to cart button
+2022-03-23 23:20:27 INFO  Log:22 - product added to cart successfullyt
+2022-03-23 23:20:27 INFO  Log:15 - =====================================add to cart test TEST END=========================================
+2022-03-23 23:49:45 INFO  Log:11 - =====================================login test TEST START=========================================
+2022-03-23 23:49:48 INFO  Log:22 - user is going to signin 
+2022-03-23 23:49:52 INFO  Log:22 - user is entering the credentials
+2022-03-23 23:49:52 INFO  Log:22 - verify user is successfully login
+2022-03-23 23:49:52 INFO  Log:22 - user login successfully
+2022-03-23 23:49:52 INFO  Log:15 - =====================================login test TEST END=========================================

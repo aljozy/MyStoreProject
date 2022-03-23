@@ -6,6 +6,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.mystore.base.BaseClass;
+import com.mystore.dataprovider.DataProviders;
 import com.mystore.pageobjects.HomePage;
 import com.mystore.pageobjects.IndexPage;
 import com.mystore.pageobjects.LoginPage;
@@ -27,8 +28,10 @@ public class LoginPageTest extends BaseClass{
 		getDriver().quit();
 	}
 	
-	@Test
-	public void loginTest() throws Throwable {
+	@Test(dataProvider = "creds", dataProviderClass = DataProviders.class)
+	
+	//dataprovider reads 2 values so we provide it as params
+	public void loginTest(String usrname,String pswd) throws Throwable {
 		Log.startTestCase("login test");
 		
 		indexPage = new IndexPage(getDriver());
@@ -37,8 +40,9 @@ public class LoginPageTest extends BaseClass{
 		loginPage =	indexPage.clickOnSignIn();
 		
 		Log.info("user is going to signin ");
-		homePage=loginPage.loginIn(prop.getProperty("username"), prop.getProperty("password"));
-		
+//		homePage=loginPage.loginIn(prop.getProperty("username"), prop.getProperty("password"));
+		homePage=loginPage.loginIn(usrname,pswd);
+
 		Log.info("user is entering the credentials");
 		String actualURL =homePage.getCurrentURL();
 		String expectedURL = "http://automationpractice.com/index.php?controller=my-account";
