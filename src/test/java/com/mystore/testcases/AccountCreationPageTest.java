@@ -17,20 +17,20 @@ public class AccountCreationPageTest extends BaseClass {
 	LoginPage lp;
 	IndexPage ip ;
 	AccountCreationPage accountCreation;
-	@BeforeMethod
+	@BeforeMethod(groups = {"smoke","sanity","sanity"})
 	
 	public void setup() {
 		launchApp();
 	}
 	
-	@AfterMethod
+	@AfterMethod(groups = {"smoke","sanity","sanity"})
 	public void tearDown() {
 		getDriver().quit();
 	}
 	
 	
 	
-	@Test
+	@Test(groups ="sanity")
 	public void verifyCreateAccountPage() throws Throwable
 	{
 		Log.startTestCase("verify account creation test");

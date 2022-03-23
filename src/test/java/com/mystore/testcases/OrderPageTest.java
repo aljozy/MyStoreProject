@@ -28,19 +28,19 @@ public class OrderPageTest extends BaseClass
 	
 	OrderPage orderPage;
 	
-	@BeforeMethod
+	@BeforeMethod(groups = {"smoke","sanity","sanity"})
 	
 	public void setup() {
 		launchApp();
 	}
 	
-	@AfterMethod
+	@AfterMethod(groups = {"smoke","sanity","sanity"})
 	public void tearDown() {
 		getDriver().quit();
 	}
 
 	
-	@Test
+	@Test(groups = "regression")
 	public void verifyTotalPrice() throws Throwable {
 		
 		Log.startTestCase("order  test");

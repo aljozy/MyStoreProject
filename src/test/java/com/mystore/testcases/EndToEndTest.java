@@ -35,18 +35,18 @@ public class EndToEndTest extends BaseClass {
 	OrderConfirmationPage orderConfirmationPage;
 	
 
-	@BeforeMethod
+	@BeforeMethod(groups = {"smoke","sanity","sanity"})
 	
 	public void setup() {
 		launchApp();
 	}
 	
-	@AfterMethod
+	@AfterMethod(groups = {"smoke","sanity","sanity"})
 	public void tearDown() {
 		getDriver().quit();
 	}
 	
-	@Test
+	@Test(groups = "regression")
 	public void endToEndTest() throws Throwable {
 		
 		Log.startTestCase("end to end test case");

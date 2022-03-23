@@ -23,20 +23,20 @@ public class AddToCartPageTest extends BaseClass {
 	LoginPage loginPage;
 	HomePage homePage;
 	
-	@BeforeMethod
+	@BeforeMethod(groups = {"smoke","sanity","sanity"})
 	
 	public void setup() {
 		launchApp();
 	}
 	
-	@AfterMethod
+	@AfterMethod(groups = {"smoke","sanity","sanity"})
 	public void tearDown() {
 		getDriver().quit();
 	
 	}
 	
 	
-	@Test
+	@Test(groups = {"regression","sanity"})
 	public void addToCartTest() throws Throwable {
 		
 		Log.startTestCase("add to cart test");

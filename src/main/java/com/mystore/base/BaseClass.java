@@ -14,6 +14,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 
 import com.mystore.actiondriver.Action;
 
@@ -32,7 +33,7 @@ public class BaseClass {
 		return driver.get();
 	}
 	
-	@BeforeSuite
+	@BeforeSuite(groups = {"smoke","sanity","sanity"})
 	public void logSetup() {
 		DOMConfigurator.configure("log4j.xml");
 	}
@@ -62,7 +63,7 @@ public class BaseClass {
 			e.printStackTrace();
 		}
 	}
-	 
+	// @Parameters("browsers")
 	public static void launchApp() {
 		//browser get from properties files
 		prop.getProperty("browser");

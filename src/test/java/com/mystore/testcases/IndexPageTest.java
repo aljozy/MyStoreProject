@@ -12,19 +12,19 @@ import com.mystore.utility.Log;
 public class IndexPageTest extends BaseClass {
 	IndexPage indexPage;
 
-	@BeforeMethod
+	@BeforeMethod(groups = {"smoke","sanity","sanity"})
 	
 	public void setup() {
 		launchApp();
 	}
 	
-	@AfterClass
+	@AfterClass(groups = {"smoke","sanity","sanity"})
 	public void tearDown() {
 		getDriver().quit();
 	}
 	
 	
-	@Test
+	@Test(groups = "smoke")
 	public void verifyLogo() throws Throwable {
 		Log.startTestCase("logo test");
 		
@@ -39,7 +39,7 @@ public class IndexPageTest extends BaseClass {
 		Log.endTestCase("logo test");
 		
 	}
-	@Test
+	@Test(groups = "smoke")
 	
 	public void verifyTitle() {
 		

@@ -17,18 +17,18 @@ public class LoginPageTest extends BaseClass{
 	LoginPage loginPage = null;
 	HomePage homePage = null;
 	
-@BeforeMethod
+@BeforeMethod(groups = {"smoke","sanity","sanity"})
 	
 	public void setup() {
 		launchApp();
 	}
 	
-	@AfterClass
+	@AfterClass(groups = {"smoke","sanity","sanity"})
 	public void tearDown() {
 		getDriver().quit();
 	}
 	
-	@Test(dataProvider = "creds", dataProviderClass = DataProviders.class)
+	@Test(dataProvider = "creds", dataProviderClass = DataProviders.class, groups = {"smoke", "sanity"})
 	
 	//dataprovider reads 2 values so we provide it as params
 	public void loginTest(String usrname,String pswd) throws Throwable {

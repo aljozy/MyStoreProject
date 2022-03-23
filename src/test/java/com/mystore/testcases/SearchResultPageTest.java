@@ -14,19 +14,19 @@ public class SearchResultPageTest extends BaseClass {
 
 	IndexPage indexPage;
 	SearchResultPage searchResultPage;
-	@BeforeMethod
+	@BeforeMethod(groups = {"smoke","sanity","sanity"})
 	
 	public void setup() {
 		launchApp();
 	}
 	
-	@AfterMethod
+	@AfterMethod(groups = {"smoke","sanity","sanity"})
 	public void tearDown() {
 		getDriver().quit();
 	}
 	
 	
-	@Test
+	@Test(groups = "smoke")
 	public void productAvialabilityTest() throws Throwable {
 		Log.startTestCase("search test");
 		

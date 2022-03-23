@@ -16,19 +16,19 @@ public class HomePageTest  extends HomePage {
 	IndexPage indexPage =null;
 	LoginPage loginPage = null;
 	
-	@BeforeMethod
+	@BeforeMethod(groups = {"smoke","sanity","sanity"})
 	
 	public void setup() {
 		launchApp();
 	}
 	
-	@AfterMethod
+	@AfterMethod(groups = {"smoke","sanity","sanity"})
 	public void tearDown() {
 		getDriver().quit();
 	}
 	
 	
-	@Test(priority = 1)
+	@Test(priority = 1, groups = "smoke")
 	public void wishListTest() throws Throwable {
 		Log.startTestCase("wishlist testcase");
 		
@@ -55,7 +55,7 @@ public class HomePageTest  extends HomePage {
 		
 		}
 	
-		@Test(priority = 2)
+		@Test(priority = 2, groups = "smoke")
 		public void orderHistoryDetailsTest() throws Throwable {
 		indexPage = new IndexPage(getDriver());
 		Log.startTestCase("order history testcase");	
