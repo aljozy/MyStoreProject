@@ -16,6 +16,7 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 
+import com.beust.jcommander.Parameter;
 import com.mystore.actiondriver.Action;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -28,22 +29,11 @@ public class BaseClass {
 	//declare Thread local driver
 	public static ThreadLocal<RemoteWebDriver> driver = new ThreadLocal<>();
 	
-	public static WebDriver getDriver() {
-		//Get driver from threadLocalMap
-		return driver.get();
-	}
-	
-	@BeforeSuite(groups = {"smoke","sanity","sanity"})
-	public void logSetup() {
-		DOMConfigurator.configure("log4j.xml");
-	}
 	
 	
-	
-	
-	
-	@BeforeTest
+	@BeforeSuite(groups = { "smoke", "sanity", "regression" })
 	public void loadConfig() {
+		DOMConfigurator.configure("log4j.xml");
 		
 		try {
 			prop = new Properties();
@@ -63,39 +53,51 @@ public class BaseClass {
 			e.printStackTrace();
 		}
 	}
-	// @Parameters("browsers")
-	public static void launchApp() {
+	
+	public static WebDriver getDriver() {
+		//Get driver from threadLocalMap
+		return driver.get();
+	}
+	
+	
+	//@Parameters("browser")
+	public  void launchApp(String browserName) {
 		//browser get from properties files
-		prop.getProperty("browser");
-		WebDriverManager.chromedriver().setup();
+		//String browserName = prop.getProperty("browser");
+		//WebDriverManager.chromedriver().setup();
 		//driver = new ChromeDriver();
 		
-		driver.set(new ChromeDriver());
-		System.out.println("driver : "+driver);
-		getDriver().get(prop.getProperty("url"));
+//		driver.set(new ChromeDriver());
+//		System.out.println("driver : "+driver);
+//		getDriver().get(prop.getProperty("url"));
 		
 		//String browserName =
 		
 //		
-//		if(browserName.contains("chrome")) {
-//
-//			WebDriverManager.chromedriver().setup();
+	if(browserName.equalsIgnoreCase("chrome")) {
+
+		WebDriverManager.chromedriver().setup();
 //			driver = new ChromeDriver();
-//			
-//		} else if (browserName.contains("firefox")) {
-//			
-//			WebDriverManager.firefoxdriver().setup();
+		
+		driver.set(new ChromeDriver());
+		}
+		else if (browserName.contains("firefox")) {
+				WebDriverManager.firefoxdriver().setup();
 //			
 //			driver = new FirefoxDriver();
+				driver.set(new FirefoxDriver());
 //
-//		}
+		}
 //		else if (browserName.contains("edge")) {
 //			WebDriverManager.edgedriver().setup();
 //			
 //			driver = new  EdgeDriver();
-//		} else {
-//			System.out.println("please select the correct browser");
-//		}
+//		} 
+	else {
+		System.out.println("please select the correct browser");
+		}
+	getDriver().get(prop.getProperty("url"));
+	
 //		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 //		driver.manage().timeouts().pageLoadTimeout(30,TimeUnit.SECONDS);
 		//Action.implicitWait(driver, 10);

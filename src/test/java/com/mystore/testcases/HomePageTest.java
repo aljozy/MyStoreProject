@@ -4,22 +4,24 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import com.mystore.base.BaseClass;
 import com.mystore.pageobjects.HomePage;
 import com.mystore.pageobjects.IndexPage;
 import com.mystore.pageobjects.LoginPage;
 import com.mystore.utility.Log;
 
-public class HomePageTest  extends HomePage {
+public class HomePageTest  extends BaseClass {
 	HomePage homePage = null;
 	IndexPage indexPage =null;
 	LoginPage loginPage = null;
-	
+	@Parameters("browser")
 	@BeforeMethod(groups = {"smoke","sanity","sanity"})
 	
-	public void setup() {
-		launchApp();
+	public void setup(String browser) {
+		launchApp(browser);
 	}
 	
 	@AfterMethod(groups = {"smoke","sanity","sanity"})

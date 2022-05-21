@@ -23,13 +23,12 @@ public class AddToCartPageTest extends BaseClass {
 	LoginPage loginPage;
 	HomePage homePage;
 	
-	@BeforeMethod(groups = {"smoke","sanity","sanity"})
+	@BeforeMethod(groups = {"smoke","sanity","regression"})
 	
-	public void setup() {
-		launchApp();
+	public void setup(String browser) {
+		launchApp(browser);
 	}
-	
-	@AfterMethod(groups = {"smoke","sanity","sanity"})
+	@AfterMethod(groups = {"smoke","sanity","regression"})
 	public void tearDown() {
 		getDriver().quit();
 	

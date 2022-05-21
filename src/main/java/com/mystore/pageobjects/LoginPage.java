@@ -1,5 +1,6 @@
 package com.mystore.pageobjects;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -8,6 +9,7 @@ import com.mystore.actiondriver.Action;
 import com.mystore.base.BaseClass;
 
 public class LoginPage extends BaseClass {
+	
 
 	@FindBy(id ="email")
 	WebElement userName;
@@ -56,7 +58,7 @@ public class LoginPage extends BaseClass {
 	
 	
 	//coz we've 2 navigation
-public AddressPage loginInAfterOrderPage(String uname, String pswd) throws Throwable {
+	public AddressPage loginInAfterOrderPage(String uname, String pswd) throws Throwable {
 		
 		Action.type(userName,uname);
 		Action.type(password,pswd);
