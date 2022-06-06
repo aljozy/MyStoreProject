@@ -16,13 +16,14 @@ public class AccountCreationPage extends BaseClass
 	
 	
 	public AccountCreationPage() {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(getDriver(), this);
 	}
 	
-	public void validateAccountCreatePage() throws Throwable {
-		Action.isDisplayed(driver, formTitle);
+	public boolean validateAccountCreatePage() throws Throwable {
+		return Action.isDisplayed(getDriver(), formTitle);
 		
 		
 	}
-
+	
+	
 }

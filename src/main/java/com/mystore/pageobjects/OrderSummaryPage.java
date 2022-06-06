@@ -17,12 +17,12 @@ public class OrderSummaryPage extends BaseClass {
 	
 	
 	public OrderSummaryPage() {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(getDriver(), this);
 	}
 	
 	public OrderConfirmationPage clickOnConfirmOrderBtn() throws Throwable{
 		
-		Action.click(driver, confirmOrderBtn);
+		Action.click(getDriver(), confirmOrderBtn);
 		return new OrderConfirmationPage();
 		
 	}

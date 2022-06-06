@@ -4,24 +4,36 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
+import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 
+import com.beust.jcommander.Parameter;
 import com.mystore.actiondriver.Action;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseClass {
+	
 	public static Properties prop;
-	public static WebDriver driver;
+	//public static WebDriver driver;
+	
+	//declare Thread local driver
+	public static ThreadLocal<RemoteWebDriver> driver = new ThreadLocal<>();
 	
 	
-	@BeforeTest
+	
+	@BeforeSuite(groups = { "smoke", "sanity", "regression" })
 	public void loadConfig() {
+		DOMConfigurator.configure("log4j.xml");
 		
 		try {
 			prop = new Properties();
@@ -30,7 +42,8 @@ public class BaseClass {
 			FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+
 					"\\Configuration\\config.properties");
 			prop.load(fis);
-			System.out.println("driver: "+driver);
+			
+			
 			
 			
 		} catch (FileNotFoundException e) {
@@ -40,37 +53,57 @@ public class BaseClass {
 			e.printStackTrace();
 		}
 	}
-	 
-	public static void launchApp() {
+	
+	public static WebDriver getDriver() {
+		//Get driver from threadLocalMap
+		return driver.get();
+	}
+	
+	
+	//@Parameters("browser")
+	public  void launchApp(String browserName) {
 		//browser get from properties files
+		//String browserName = prop.getProperty("browser");
+		//WebDriverManager.chromedriver().setup();
+		//driver = new ChromeDriver();
 		
+//		driver.set(new ChromeDriver());
+//		System.out.println("driver : "+driver);
+//		getDriver().get(prop.getProperty("url"));
 		
-		String browserName = prop.getProperty("browser");
+		//String browserName =
 		
-		if(browserName.contains("chrome")) {
-			
-			WebDriverManager.chromedriver().setup();
+//		
+	if(browserName.equalsIgnoreCase("chrome")) {
 
-			driver = new ChromeDriver();
-		} else if (browserName.contains("firefox")) {
-			
-			WebDriverManager.firefoxdriver().setup();
-			
-			driver = new FirefoxDriver();
-
-		}
-		else if (browserName.contains("edge")) {
-			WebDriverManager.edgedriver().setup();
-			
-			driver = new  EdgeDriver();
-		} else {
-			System.out.println("please select the correct browser");
-		}
+		WebDriverManager.chromedriver().setup();
+//			driver = new ChromeDriver();
 		
-		Action.implicitWait(driver, 10);
-		Action.pageLoadTimeOut(driver, 30);
+		driver.set(new ChromeDriver());
+		}
+		else if (browserName.contains("firefox")) {
+				WebDriverManager.firefoxdriver().setup();
+//			
+//			driver = new FirefoxDriver();
+				driver.set(new FirefoxDriver());
+//
+		}
+//		else if (browserName.contains("edge")) {
+//			WebDriverManager.edgedriver().setup();
+//			
+//			driver = new  EdgeDriver();
+//		} 
+	else {
+		System.out.println("please select the correct browser");
+		}
+	getDriver().get(prop.getProperty("url"));
+	
+//		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+//		driver.manage().timeouts().pageLoadTimeout(30,TimeUnit.SECONDS);
+		//Action.implicitWait(driver, 10);
+		//Action.pageLoadTimeOut(driver, 30);
 		//loaded from properties files
-		driver.get(prop.getProperty("url"));
+		
 	}
 	
 	

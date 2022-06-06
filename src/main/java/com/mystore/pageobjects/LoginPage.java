@@ -1,5 +1,6 @@
 package com.mystore.pageobjects;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -8,6 +9,7 @@ import com.mystore.actiondriver.Action;
 import com.mystore.base.BaseClass;
 
 public class LoginPage extends BaseClass {
+	
 
 	@FindBy(id ="email")
 	WebElement userName;
@@ -30,7 +32,7 @@ public class LoginPage extends BaseClass {
 	
 	
 	public LoginPage() {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(getDriver(), this);
 	}
 	
 	
@@ -39,7 +41,7 @@ public class LoginPage extends BaseClass {
 		Action.type(userName,uname);
 		Action.type(password,pswd);
 		
-		Action.click(driver, SignInBtn);
+		Action.click(getDriver(), SignInBtn);
 		
 		return new HomePage();
 		
@@ -50,17 +52,18 @@ public class LoginPage extends BaseClass {
 	
 	public AccountCreationPage createNewAccount(String newEmail) throws Throwable {
 		Action.type(emailForNewAccount, newEmail );
+		Action.click(getDriver(), createNewAccoutnBtn);
 		return new AccountCreationPage();
 	}
 	
 	
 	//coz we've 2 navigation
-public AddressPage loginInAfterOrderPage(String uname, String pswd) throws Throwable {
+	public AddressPage loginInAfterOrderPage(String uname, String pswd) throws Throwable {
 		
 		Action.type(userName,uname);
 		Action.type(password,pswd);
 		
-		Action.click(driver, SignInBtn);
+		Action.click(getDriver(), SignInBtn);
 		
 		return new AddressPage();
 		

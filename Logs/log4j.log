@@ -1,0 +1,176 @@
+2022-03-19 00:46:42 INFO  Log:11 - =====================================login test TEST START=========================================
+2022-03-19 00:46:46 INFO  Log:22 - user is going to signin 
+2022-03-19 00:46:49 INFO  Log:22 - user is entering the credentials
+2022-03-19 00:46:49 INFO  Log:22 - verify user is successfully login
+2022-03-19 00:46:50 INFO  Log:22 - user login successfully
+2022-03-19 00:48:16 INFO  Log:11 - =====================================login test TEST START=========================================
+2022-03-19 00:48:21 INFO  Log:22 - user is going to signin 
+2022-03-19 00:48:27 INFO  Log:22 - user is entering the credentials
+2022-03-19 00:48:27 INFO  Log:22 - verify user is successfully login
+2022-03-19 00:48:27 INFO  Log:22 - user login successfully
+2022-03-19 00:48:27 INFO  Log:15 - =====================================login test TEST END=========================================
+2022-03-23 23:20:13 INFO  Log:11 - =====================================add to cart test TEST START=========================================
+2022-03-23 23:20:17 INFO  Log:22 - user is searching the product
+2022-03-23 23:20:24 INFO  Log:22 - user clicked on the product
+2022-03-23 23:20:24 INFO  Log:22 - user entered the quantity
+2022-03-23 23:20:25 INFO  Log:22 - user selected the size of the product
+2022-03-23 23:20:27 INFO  Log:22 - user click on add to cart button
+2022-03-23 23:20:27 INFO  Log:22 - product added to cart successfullyt
+2022-03-23 23:20:27 INFO  Log:15 - =====================================add to cart test TEST END=========================================
+2022-03-23 23:49:45 INFO  Log:11 - =====================================login test TEST START=========================================
+2022-03-23 23:49:48 INFO  Log:22 - user is going to signin 
+2022-03-23 23:49:52 INFO  Log:22 - user is entering the credentials
+2022-03-23 23:49:52 INFO  Log:22 - verify user is successfully login
+2022-03-23 23:49:52 INFO  Log:22 - user login successfully
+2022-03-23 23:49:52 INFO  Log:15 - =====================================login test TEST END=========================================
+2022-03-23 23:55:41 INFO  Log:11 - =====================================login test TEST START=========================================
+2022-03-23 23:55:45 INFO  Log:22 - user is going to signin 
+2022-03-23 23:55:50 INFO  Log:22 - user is entering the credentials
+2022-03-23 23:55:50 INFO  Log:22 - verify user is successfully login
+2022-03-23 23:55:50 INFO  Log:22 - user login successfully
+2022-03-23 23:55:50 INFO  Log:15 - =====================================login test TEST END=========================================
+2022-03-23 23:55:58 INFO  Log:11 - =====================================login test TEST START=========================================
+2022-03-23 23:56:01 INFO  Log:22 - user is going to signin 
+2022-03-23 23:56:03 INFO  Log:22 - user is entering the credentials
+2022-03-23 23:56:03 INFO  Log:22 - verify user is successfully login
+2022-03-23 23:56:12 INFO  Log:11 - =====================================end to end test case TEST START=========================================
+2022-03-23 23:56:12 INFO  Log:22 - user is searching the product
+2022-03-23 23:56:19 INFO  Log:22 - user clicked on add to cart button
+2022-03-23 23:56:26 INFO  Log:22 - user click on checkout button and redirected to login page 
+2022-03-23 23:56:29 INFO  Log:22 - user entered the valid credentials
+2022-03-23 23:56:36 INFO  Log:22 - user click on checkout button
+2022-03-23 23:56:36 INFO  Log:22 - user accepted the terms
+2022-03-23 23:56:41 INFO  Log:22 - payment confirmation
+2022-03-23 23:56:46 INFO  Log:22 - order confimation
+2022-03-23 23:56:46 INFO  Log:22 - order successfully placed
+2022-03-23 23:56:46 INFO  Log:15 - =====================================end to end test case TEST END=========================================
+2022-03-23 23:56:57 INFO  Log:11 - =====================================logo test TEST START=========================================
+2022-03-23 23:56:57 INFO  Log:22 - validating logo
+2022-03-23 23:56:57 INFO  Log:22 - logo successfully validated
+2022-03-23 23:56:57 INFO  Log:15 - =====================================logo test TEST END=========================================
+2022-03-23 23:57:06 INFO  Log:11 - =====================================title test TEST START=========================================
+2022-03-23 23:57:06 INFO  Log:22 - validating title
+2022-03-23 23:57:06 INFO  Log:22 - title successfully validated
+2022-03-23 23:57:06 INFO  Log:15 - =====================================title test TEST END=========================================
+2022-03-23 23:57:14 INFO  Log:11 - =====================================verify account creation test TEST START=========================================
+2022-03-23 23:57:17 INFO  Log:22 - user clicked on signin button
+2022-03-23 23:57:17 INFO  Log:22 - user entered email
+2022-03-23 23:57:20 INFO  Log:22 - test verified successfully
+2022-03-23 23:57:20 INFO  Log:15 - =====================================verify account creation test TEST END=========================================
+2022-03-23 23:57:29 INFO  Log:11 - =====================================search test TEST START=========================================
+2022-03-23 23:57:32 INFO  Log:22 - user is searching the product
+2022-03-23 23:57:32 INFO  Log:22 - validating product availibility 
+2022-03-23 23:57:32 INFO  Log:22 - product availibilty successfully validated
+2022-03-23 23:57:32 INFO  Log:15 - =====================================search test TEST END=========================================
+2022-03-23 23:57:41 INFO  Log:11 - =====================================wishlist testcase TEST START=========================================
+2022-03-23 23:57:44 INFO  Log:22 - user click on signin button
+2022-03-23 23:57:48 INFO  Log:22 - user entered valid credentials
+2022-03-23 23:57:48 INFO  Log:22 - validating wishlist
+2022-03-23 23:57:48 INFO  Log:15 - =====================================wishlist testcase TEST END=========================================
+2022-03-23 23:57:48 INFO  Log:22 - wishlist successfully validated
+2022-03-23 23:57:57 INFO  Log:11 - =====================================order history testcase TEST START=========================================
+2022-03-23 23:58:02 INFO  Log:22 - user click on sigin button
+2022-03-23 23:58:06 INFO  Log:22 - user entered the valid credentials
+2022-03-23 23:58:06 INFO  Log:22 - validating order history
+2022-03-23 23:58:06 INFO  Log:22 - order history validated successfully
+2022-03-23 23:58:06 INFO  Log:15 - =====================================order history testcase TEST END=========================================
+2022-03-23 23:58:20 INFO  Log:11 - =====================================order  test TEST START=========================================
+2022-03-23 23:58:20 INFO  Log:22 - user is searching the product
+2022-03-23 23:58:29 INFO  Log:22 - product found and clicked by the user
+2022-03-23 23:58:33 INFO  Log:22 - user clicked on add to cart
+2022-03-23 23:58:37 INFO  Log:22 - user is checking out the product
+2022-03-23 23:58:37 INFO  Log:22 - validating price
+2022-03-23 23:58:37 INFO  Log:22 - price successfully validated
+2022-03-23 23:58:37 INFO  Log:11 - =====================================order test TEST START=========================================
+2022-03-23 23:58:47 INFO  Log:11 - =====================================add to cart test TEST START=========================================
+2022-03-23 23:58:49 INFO  Log:22 - user is searching the product
+2022-03-23 23:58:52 INFO  Log:22 - user clicked on the product
+2022-03-23 23:58:53 INFO  Log:22 - user entered the quantity
+2022-03-23 23:58:53 INFO  Log:22 - user selected the size of the product
+2022-03-23 23:58:56 INFO  Log:22 - user click on add to cart button
+2022-03-23 23:58:56 INFO  Log:22 - product added to cart successfullyt
+2022-03-23 23:58:56 INFO  Log:15 - =====================================add to cart test TEST END=========================================
+2022-03-24 00:42:30 INFO  Log:11 - =====================================end to end test case TEST START=========================================
+2022-03-24 00:42:30 INFO  Log:22 - user is searching the product
+2022-03-24 01:00:36 INFO  Log:11 - =====================================end to end test case TEST START=========================================
+2022-03-24 01:00:36 INFO  Log:22 - user is searching the product
+2022-03-24 01:00:47 INFO  Log:11 - =====================================order  test TEST START=========================================
+2022-03-24 01:00:47 INFO  Log:22 - user is searching the product
+2022-03-24 01:07:27 INFO  Log:11 - =====================================logo test TEST START=========================================
+2022-03-24 01:07:27 INFO  Log:22 - validating logo
+2022-03-24 01:07:44 INFO  Log:11 - =====================================title test TEST START=========================================
+2022-03-24 01:07:44 INFO  Log:22 - validating title
+2022-03-24 01:08:12 INFO  Log:11 - =====================================logo test TEST START=========================================
+2022-03-24 01:08:12 INFO  Log:22 - validating logo
+2022-03-24 01:10:41 INFO  Log:11 - =====================================logo test TEST START=========================================
+2022-03-24 01:10:41 INFO  Log:22 - validating logo
+2022-03-24 01:10:48 INFO  Log:11 - =====================================title test TEST START=========================================
+2022-03-24 01:10:48 INFO  Log:22 - validating title
+2022-03-24 01:11:10 INFO  Log:11 - =====================================logo test TEST START=========================================
+2022-03-24 01:11:10 INFO  Log:22 - validating logo
+2022-04-25 18:11:25 INFO  Log:11 - =====================================logo test TEST START=========================================
+2022-04-25 18:11:25 INFO  Log:22 - validating logo
+2022-04-25 18:11:46 INFO  Log:11 - =====================================title test TEST START=========================================
+2022-04-25 18:11:46 INFO  Log:22 - validating title
+2022-04-25 18:12:11 INFO  Log:11 - =====================================logo test TEST START=========================================
+2022-04-25 18:12:11 INFO  Log:22 - validating logo
+2022-04-25 18:12:29 INFO  Log:11 - =====================================title test TEST START=========================================
+2022-04-25 18:12:29 INFO  Log:22 - validating title
+2022-04-25 18:16:29 INFO  Log:11 - =====================================login test TEST START=========================================
+2022-04-25 18:16:33 INFO  Log:11 - =====================================logo test TEST START=========================================
+2022-04-25 18:16:33 INFO  Log:22 - validating logo
+2022-04-25 18:16:48 INFO  Log:11 - =====================================title test TEST START=========================================
+2022-04-25 18:16:48 INFO  Log:22 - validating title
+2022-04-25 18:17:01 INFO  Log:11 - =====================================search test TEST START=========================================
+2022-04-25 18:17:17 INFO  Log:11 - =====================================wishlist testcase TEST START=========================================
+2022-04-25 18:17:35 INFO  Log:11 - =====================================order history testcase TEST START=========================================
+2022-05-21 16:51:55 INFO  Log:11 - =====================================login test TEST START=========================================
+2022-05-21 16:51:59 INFO  Log:11 - =====================================end to end test case TEST START=========================================
+2022-05-21 16:51:59 INFO  Log:22 - user is searching the product
+2022-05-21 16:52:02 INFO  Log:11 - =====================================logo test TEST START=========================================
+2022-05-21 16:52:02 INFO  Log:22 - validating logo
+2022-05-21 16:52:05 INFO  Log:11 - =====================================title test TEST START=========================================
+2022-05-21 16:52:05 INFO  Log:22 - validating title
+2022-05-21 16:52:08 INFO  Log:11 - =====================================verify account creation test TEST START=========================================
+2022-05-21 16:52:12 INFO  Log:11 - =====================================search test TEST START=========================================
+2022-05-21 16:52:15 INFO  Log:11 - =====================================wishlist testcase TEST START=========================================
+2022-05-21 16:52:19 INFO  Log:11 - =====================================order history testcase TEST START=========================================
+2022-05-21 16:52:22 INFO  Log:11 - =====================================order  test TEST START=========================================
+2022-05-21 16:52:22 INFO  Log:22 - user is searching the product
+2022-05-21 16:54:09 INFO  Log:11 - =====================================login test TEST START=========================================
+2022-05-21 16:54:10 INFO  Log:11 - =====================================verify account creation test TEST START=========================================
+2022-05-21 16:54:45 INFO  Log:11 - =====================================end to end test case TEST START=========================================
+2022-05-21 16:54:45 INFO  Log:22 - user is searching the product
+2022-05-21 16:54:47 INFO  Log:11 - =====================================order  test TEST START=========================================
+2022-05-21 16:54:47 INFO  Log:22 - user is searching the product
+2022-05-21 16:58:17 INFO  Log:11 - =====================================logo test TEST START=========================================
+2022-05-21 16:58:17 INFO  Log:22 - validating logo
+2022-05-21 16:58:17 INFO  Log:22 - logo successfully validated
+2022-05-21 16:58:17 INFO  Log:15 - =====================================logo test TEST END=========================================
+2022-05-21 16:58:27 INFO  Log:11 - =====================================title test TEST START=========================================
+2022-05-21 16:58:27 INFO  Log:22 - validating title
+2022-05-21 16:58:27 INFO  Log:22 - title successfully validated
+2022-05-21 16:58:27 INFO  Log:15 - =====================================title test TEST END=========================================
+2022-05-21 16:58:39 INFO  Log:11 - =====================================search test TEST START=========================================
+2022-05-21 16:58:42 INFO  Log:22 - user is searching the product
+2022-05-21 16:58:42 INFO  Log:22 - validating product availibility 
+2022-05-21 16:58:42 INFO  Log:22 - product availibilty successfully validated
+2022-05-21 16:58:42 INFO  Log:15 - =====================================search test TEST END=========================================
+2022-05-21 16:58:53 INFO  Log:11 - =====================================wishlist testcase TEST START=========================================
+2022-05-21 16:58:57 INFO  Log:22 - user click on signin button
+2022-05-21 16:59:00 INFO  Log:22 - user entered valid credentials
+2022-05-21 16:59:00 INFO  Log:22 - validating wishlist
+2022-05-21 16:59:00 INFO  Log:15 - =====================================wishlist testcase TEST END=========================================
+2022-05-21 16:59:00 INFO  Log:22 - wishlist successfully validated
+2022-05-21 16:59:12 INFO  Log:11 - =====================================order history testcase TEST START=========================================
+2022-05-21 16:59:15 INFO  Log:22 - user click on sigin button
+2022-05-21 16:59:18 INFO  Log:22 - user entered the valid credentials
+2022-05-21 16:59:18 INFO  Log:22 - validating order history
+2022-05-21 16:59:18 INFO  Log:22 - order history validated successfully
+2022-05-21 16:59:18 INFO  Log:15 - =====================================order history testcase TEST END=========================================
+2022-05-21 16:59:30 INFO  Log:11 - =====================================login test TEST START=========================================
+2022-05-21 16:59:34 INFO  Log:22 - user is going to signin 
+2022-05-21 16:59:37 INFO  Log:22 - user is entering the credentials
+2022-05-21 16:59:37 INFO  Log:22 - verify user is successfully login
+2022-05-21 16:59:37 INFO  Log:22 - user login successfully
+2022-05-21 16:59:37 INFO  Log:15 - =====================================login test TEST END=========================================

@@ -34,7 +34,6 @@ import com.mystore.base.BaseClass;
  *
  */
 public class Action extends BaseClass  {
-
 	
 	public static void scrollByVisibilityOfElement(WebDriver driver, WebElement ele) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -738,7 +737,7 @@ public class Action extends BaseClass  {
 	}
 	
 	 
-	public static void fluentWait(WebDriver driver,WebElement element, int timeOut) {
+	public static void fluentWait(WebElement element, int timeOut) {
 	    Wait<WebDriver> wait = null;
 	    try {
 	        wait = new FluentWait<WebDriver>((WebDriver) driver)
@@ -751,8 +750,8 @@ public class Action extends BaseClass  {
 	    }
 	}
 	 
-	public static void implicitWait(WebDriver driver, int timeOut) {
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	public static void implicitWait(WebDriver driver, long timeOut) {
+		driver.manage().timeouts().implicitlyWait(timeOut,TimeUnit.SECONDS);
 	}
 	 
 	public static void explicitWait(WebDriver driver, WebElement element, int timeOut ) {

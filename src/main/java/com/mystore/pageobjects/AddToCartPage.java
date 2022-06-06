@@ -16,7 +16,7 @@ public class AddToCartPage extends BaseClass {
 	WebElement size;
 	
 	
-	@FindBy(xpath ="button[name='Submit']")
+	@FindBy(css ="button[name='Submit']")
 	WebElement addToCartBtn ;
 	
 	@FindBy(id ="wishlist_button")
@@ -28,9 +28,12 @@ public class AddToCartPage extends BaseClass {
 	@FindBy(xpath = "//a[@title='Proceed to checkout']")
 	WebElement proceedToCheckOutBtn;
 	
+	@FindBy(css=".layer_cart_product_info")
+	WebElement dialogBox;
+	
 	
 	public AddToCartPage() {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(getDriver(), this);
 	}
 	
 	
@@ -47,22 +50,25 @@ public void selectSize(String size1) throws Throwable {
 
 public void clickOnAddToCart() throws Throwable {
 	
-	Action.click(driver, addToCartBtn);
+	Action.click(getDriver(), addToCartBtn);
+	Action.explicitWait(getDriver(), dialogBox, 10);
+	
 	
 	
 }
 
 
 public boolean validateAddToCart( )throws Throwable {
-	
-	return Action.isDisplayed(driver, addToCartMessage);
+	Action.explicitWait(getDriver(), dialogBox, 10);
+	return Action.isDisplayed(getDriver(), addToCartMessage);
 	
 	
 }
 
 public  OrderPage clickOnCheckOut()throws Throwable{
 	
-	Action.JSClick(driver,proceedToCheckOutBtn );
+	Action.JSClick(getDriver(),proceedToCheckOutBtn );
+	Action.fluentWait(proceedToCheckOutBtn, 10);
 	return new OrderPage();
 	
 }
