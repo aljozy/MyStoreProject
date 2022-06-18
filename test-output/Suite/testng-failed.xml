@@ -16,6 +16,15 @@
           <include name="tearDown"/>
         </methods>
       </class> <!-- com.mystore.testcases.AddToCartPageTest -->
+      <class name="com.mystore.testcases.IndexPageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setup"/>
+          <include name="end"/>
+          <include name="loadConfig"/>
+          <include name="verifyTitle"/>
+        </methods>
+      </class> <!-- com.mystore.testcases.IndexPageTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

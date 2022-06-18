@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-skipped">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,7 +93,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">10 methods,  1 skipped,  9 passed</span>
+                    <span class="method-stats">10 methods, 1 failed,  1 skipped,  8 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.mystore.testcases.IndexPageTest" class="method navigator-link" hash-for-method="verifyTitle">verifyTitle</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title skipped">Skipped methods</span>
@@ -148,11 +162,6 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.mystore.testcases.IndexPageTest" class="method navigator-link" hash-for-method="verifyTitle">verifyTitle</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.mystore.testcases.OrderPageTest" class="method navigator-link" hash-for-method="verifyTotalPrice">verifyTotalPrice</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -173,6 +182,26 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.mystore.testcases.IndexPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyTitle">
+                  </a> <!-- verifyTitle -->
+                  <span class="method-name">verifyTitle</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [My Store1] but found [My Store]
+	at com.mystore.testcases.IndexPageTest.verifyTitle(IndexPageTest.java:54)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 33 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
               <img src="skipped.png"/>
@@ -305,13 +334,6 @@ For more information on native dependency injection please refer to https://test
                   <span class="method-name">verifyLogo</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyTitle">
-                  </a> <!-- verifyTitle -->
-                  <span class="method-name">verifyTitle</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
@@ -441,39 +463,39 @@ data.addRows(10);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'endToEndTest')
 data.setCell(0, 2, 'com.mystore.testcases.EndToEndTest')
-data.setCell(0, 3, 26322);
+data.setCell(0, 3, 26480);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifyTotalPrice')
-data.setCell(1, 2, 'com.mystore.testcases.OrderPageTest')
-data.setCell(1, 3, 11600);
+data.setCell(1, 1, 'wishListTest')
+data.setCell(1, 2, 'com.mystore.testcases.HomePageTest')
+data.setCell(1, 3, 15885);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'verifyCreateAccountPage')
-data.setCell(2, 2, 'com.mystore.testcases.AccountCreationPageTest')
-data.setCell(2, 3, 9231);
+data.setCell(2, 1, 'verifyTotalPrice')
+data.setCell(2, 2, 'com.mystore.testcases.OrderPageTest')
+data.setCell(2, 3, 12210);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'loginTest')
-data.setCell(3, 2, 'com.mystore.testcases.LoginPageTest')
-data.setCell(3, 3, 7261);
+data.setCell(3, 1, 'orderHistoryDetailsTest')
+data.setCell(3, 2, 'com.mystore.testcases.HomePageTest')
+data.setCell(3, 3, 7831);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'orderHistoryDetailsTest')
-data.setCell(4, 2, 'com.mystore.testcases.HomePageTest')
-data.setCell(4, 3, 6222);
+data.setCell(4, 1, 'loginTest')
+data.setCell(4, 2, 'com.mystore.testcases.LoginPageTest')
+data.setCell(4, 3, 7289);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'wishListTest')
-data.setCell(5, 2, 'com.mystore.testcases.HomePageTest')
-data.setCell(5, 3, 5974);
+data.setCell(5, 1, 'verifyCreateAccountPage')
+data.setCell(5, 2, 'com.mystore.testcases.AccountCreationPageTest')
+data.setCell(5, 3, 6241);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'productAvialabilityTest')
 data.setCell(6, 2, 'com.mystore.testcases.SearchResultPageTest')
-data.setCell(6, 3, 2716);
+data.setCell(6, 3, 2856);
 data.setCell(7, 0, 7)
 data.setCell(7, 1, 'verifyLogo')
 data.setCell(7, 2, 'com.mystore.testcases.IndexPageTest')
-data.setCell(7, 3, 109);
+data.setCell(7, 3, 115);
 data.setCell(8, 0, 8)
 data.setCell(8, 1, 'verifyTitle')
 data.setCell(8, 2, 'com.mystore.testcases.IndexPageTest')
-data.setCell(8, 3, 20);
+data.setCell(8, 3, 22);
 data.setCell(9, 0, 9)
 data.setCell(9, 1, 'addToCartTest')
 data.setCell(9, 2, 'com.mystore.testcases.AddToCartPageTest')
@@ -578,143 +600,145 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">setup(chrome)</span>
-                <span class="method-start">1431 ms</span>
+                <span class="method-start">1265 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">loginTest(veorrdxmgycqvaahmn@nthrl.com , bandar@123)</span>
-                <span class="method-start">17524 ms</span>
+                <span class="method-start">14920 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">24808 ms</span>
+                <span class="method-start">22219 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.mystore.testcases.EndToEndTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup(chrome)</span>
-                <span class="method-start">25207 ms</span>
+                <span class="method-start">22495 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">endToEndTest</span>
-                <span class="method-start">36891 ms</span>
+                <span class="method-start">32673 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">63215 ms</span>
+                <span class="method-start">59158 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.mystore.testcases.IndexPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup(chrome)</span>
-                <span class="method-start">63486 ms</span>
+                <span class="method-start">59472 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyLogo</span>
-                <span class="method-start">72761 ms</span>
+                <span class="method-start">69742 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">setup(chrome)</span>
-                <span class="method-start">72874 ms</span>
+                <span class="method-start">69859 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">verifyTitle</span>
-                <span class="method-start">82624 ms</span>
+                <span class="method-start">81247 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">82647 ms</span>
+                <span class="method-start">81967 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.mystore.testcases.AccountCreationPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup(chrome)</span>
-                <span class="method-start">82999 ms</span>
+                <span class="method-start">82289 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyCreateAccountPage</span>
-                <span class="method-start">93651 ms</span>
+                <span class="method-start">92637 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">102883 ms</span>
+                <span class="method-start">98879 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.mystore.testcases.SearchResultPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup(chrome)</span>
-                <span class="method-start">103173 ms</span>
+                <span class="method-start">99165 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">productAvialabilityTest</span>
-                <span class="method-start">113369 ms</span>
+                <span class="method-start">108864 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">116087 ms</span>
+                <span class="method-start">111722 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.mystore.testcases.HomePageTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup(chrome)</span>
-                <span class="method-start">116418 ms</span>
+                <span class="method-start">112014 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">wishListTest</span>
-                <span class="method-start">126502 ms</span>
+                <span class="method-start">121553 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">132486 ms</span>
+                <span class="method-start">137440 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup(chrome)</span>
-                <span class="method-start">132722 ms</span>
+                <span class="method-start">137848 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">orderHistoryDetailsTest</span>
-                <span class="method-start">141760 ms</span>
+                <span class="method-start">150136 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">147983 ms</span>
+                <span class="method-start">157969 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.mystore.testcases.OrderPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup(chrome)</span>
-                <span class="method-start">148257 ms</span>
+                <span class="method-start">158323 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyTotalPrice</span>
-                <span class="method-start">158031 ms</span>
+                <span class="method-start">168506 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">169641 ms</span>
+                <span class="method-start">180717 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.mystore.testcases.AddToCartPageTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">addToCartTest</span>
-                <span class="method-start">169966 ms</span>
+                <span class="method-start">181039 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">169970 ms</span>
+                <span class="method-start">181043 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.mystore.testcases.LoginPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">end</span>
-                <span class="method-start">170021 ms</span>
+                <span class="method-start">181089 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
