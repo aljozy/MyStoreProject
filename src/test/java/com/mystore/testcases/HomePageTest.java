@@ -17,6 +17,7 @@ public class HomePageTest  extends BaseClass {
 	HomePage homePage = null;
 	IndexPage indexPage =null;
 	LoginPage loginPage = null;
+	
 	@Parameters("browser")
 	@BeforeMethod(groups = {"smoke","sanity","sanity"})
 	
